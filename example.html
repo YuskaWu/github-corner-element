@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gitHub-corner example</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+
+  <script src="https://unpkg.com/github-corner-element"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: Helvetica, Arial, sans-serif;
+      background-image: radial-gradient(#ffffff, #ebeff4);
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+    }
+
+    .example {
+      display: flex;
+      align-items: stretch;
+      height: 10rem;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .example__left {
+      position: relative;
+      width: 10rem;
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+      padding: 0.5rem;
+    }
+
+    .example__right {
+      margin: 0;
+      display: flex;
+      overflow: auto;
+      flex-grow: 1;
+
+    }
+
+    .example__right code {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .custom-style::part(banner) {
+      fill: #cceb34;
+      stroke: #d453f5;
+      stroke-width: 16;
+      transition: fill 0.2s;
+    }
+
+    .custom-style:hover::part(banner) {
+      fill: white;
+    }
+
+    .custom-style::part(octocat) {
+      fill: #d453f5;
+      stroke: black;
+      stroke-width: 3;
+    }
+
+    .custom-style::part(octocat-arm) {
+      animation-name: wave-hand;
+      animation-duration: 0.2s;
+      animation-iteration-count: infinite
+    }
+
+    ::-webkit-scrollbar {
+      width: 0.3rem;
+      height: 0.3rem;
+    }
+
+    ::-webkit-scrollbar-corner {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgb(239, 153, 47);
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: rgba(255, 255, 255, 0.6)
+    }
+  </style>
+</head>
+
+<body>
+  <div id="yuska"></div>
+  <github-corner href="https://github.com/YuskaWu/github-corner-element" style="position: fixed"></github-corner>
+
+  <main>
+    <h2>github-corner examples</h2>
+
+    <div class="example">
+      <div class="example__left">
+        <github-corner href="https://github.com/YuskaWu/github-corner-element"></github-corner>
+      </div>
+      <pre class="example__right">
+        <code class="language-html">
+&lt;github-corner
+  href=&quot;https://github.com/YuskaWu/github-corner-element&quot;&gt;
+&lt;/github-corner&gt;
+        </code>
+      </pre>
+    </div>
+
+    <div class="example">
+      <div class="example__left">
+        <github-corner wave-duration="1s"></github-corner>
+      </div>
+      <pre class="example__right">
+        <code class="language-html">
+&lt;github-corner wave-duration=&quot;1s&quot;&gt;&lt;/github-corner&gt;
+        </code>
+      </pre>
+    </div>
+
+    <div class="example">
+      <div class="example__left">
+        <github-corner size="7.5rem"></github-corner>
+      </div>
+      <pre class="example__right">
+        <code class="language-html">
+&lt;github-corner size=&quot;7.5rem&quot;&gt;&lt;/github-corner&gt;
+        </code>
+      </pre>
+    </div>
+
+    <div class="example">
+      <div class="example__left">
+        <github-corner placement="top-left"></github-corner>
+        <github-corner placement="top-right"></github-corner>
+        <github-corner placement="bottom-left"></github-corner>
+        <github-corner placement="bottom-right"></github-corner>
+      </div>
+      <pre class="example__right">
+        <code class="language-html">
+&lt;github-corner placement=&quot;top-left&quot;&gt;&lt;/github-corner&gt;
+&lt;github-corner placement=&quot;top-right&quot;&gt;&lt;/github-corner&gt;
+&lt;github-corner placement=&quot;bottom-left&quot;&gt;&lt;/github-corner&gt;
+&lt;github-corner placement=&quot;bottom-right&quot;&gt;&lt;/github-corner&gt;
+        </code>
+      </pre>
+    </div>
+
+    <div class="example">
+      <div class="example__left" style="background-color: #cceb34">
+        <github-corner style="mix-blend-mode: darken;">
+        </github-corner>
+        <p style="font-size: 0.6rem">
+          One Piece is a Japanese manga series written and illustrated by Eiichiro Oda. It has been serialized in
+          Shueisha's shōnen manga magazine Weekly Shōnen Jump since July 1997, with its individual chapters compiled
+          into 103 tankōbon volumes as of August 2022.
+        </p>
+      </div>
+      <pre class="example__right">
+        <code class="language-html">
+&lt;github-corner style=&quot;mix-blend-mode: darken;&quot;&gt;&lt;/github-corner&gt;
+        </code>
+      </pre>
+    </div>
+
+    <div class="example">
+      <div class="example__left">
+        <github-corner banner-color="#cceb34" octocat-color="#d453f5"></github-corner>
+      </div>
+      <pre class="example__right">
+        <code class="language-html">
+&lt;github-corner
+  banner-color=&quot;#cceb34&quot;
+  octocat-color=&quot;#d453f5&quot;&gt;
+&lt;/github-corner&gt;
+        </code>
+      </pre>
+    </div>
+
+    <div id="ex-styling" class="example">
+      <div class="example__left">
+        <github-corner class="custom-style"></github-corner>
+      </div>
+      <pre class="example__right">
+        <code class="language-html">
+&lt;style&gt;
+  .custom-style::part(banner) {
+    fill: #cceb34;
+    stroke: #d453f5;
+    stroke-width: 16;
+    transition: fill 0.2s;
+  }
+
+  .custom-style:hover::part(banner) {
+    fill: white;
+  }
+
+  .custom-style::part(octocat) {
+    fill: #d453f5;
+    stroke: black;
+    stroke-width: 3;
+  }
+
+  .custom-style::part(octocat-arm) {
+    animation-name: wave-hand;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite
+  }
+&lt;/style&gt;
+
+&lt;github-corner class=&quot;custom-style&quot;&gt;&lt;/github-corner&gt;
+        </code>
+      </pre>
+    </div>
+
+    <div id="ex-slot-eyes" class="example">
+      <div class="example__left">
+        <github-corner>
+          <svg slot="svg">
+            <circle cx="161" cy="75" r="4" fill="black" />
+            <circle cx="161" cy="75" r="6" stroke="black" fill="transparent" />
+            <circle cx="181" cy="95" r="4" fill="black" />
+            <circle cx="181" cy="95" r="6" stroke="black" fill="transparent" />
+          </svg>
+        </github-corner>
+      </div>
+      <pre class="example__right">
+        <code class="language-html">
+&lt;github-corner&gt;
+  &lt;svg slot=&quot;svg&quot;&gt;
+    &lt;circle cx=&quot;161&quot; cy=&quot;75&quot; r=&quot;4&quot; fill=&quot;black&quot; /&gt;
+    &lt;circle cx=&quot;161&quot; cy=&quot;75&quot; r=&quot;6&quot; stroke=&quot;black&quot; fill=&quot;transparent&quot; /&gt;
+    &lt;circle cx=&quot;181&quot; cy=&quot;95&quot; r=&quot;4&quot; fill=&quot;black&quot; /&gt;
+    &lt;circle cx=&quot;181&quot; cy=&quot;95&quot; r=&quot;6&quot; stroke=&quot;black&quot; fill=&quot;transparent&quot; /&gt;
+  &lt;/svg&gt;
+&lt;/github-corner&gt;
+        </code>
+      </pre>
+    </div>
+
+    <div id="ex-slot-gradient" class="example">
+      <div class="example__left">
+        <github-corner banner-color="url(#banner-grad)" octocat-color="url(#octocat-grad)">
+          <svg slot="svg">
+            <defs>
+              <radialGradient id="banner-grad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                <stop offset="0%" style="stop-color:rgb(212, 231, 216);
+        stop-opacity:0" />
+                <stop offset="100%" style="stop-color:rgb(121, 203, 184);stop-opacity:1" />
+              </radialGradient>
+              <linearGradient id="octocat-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </github-corner>
+      </div>
+      <pre class="example__right">
+        <code class="language-html">
+&lt;github-corner
+  banner-color=&quot;url(#banner-grad)&quot;
+  octocat-color=&quot;url(#octocat-grad)&quot;&gt;
+
+  &lt;svg slot=&quot;svg&quot;&gt;
+    &lt;defs&gt;
+      &lt;radialGradient id=&quot;banner-grad&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50%&quot; fx=&quot;50%&quot; fy=&quot;50%&quot;&gt;
+        &lt;stop offset=&quot;0%&quot; style=&quot;stop-color:rgb(212, 231, 216);
+        stop-opacity:0&quot; /&gt;
+        &lt;stop offset=&quot;100%&quot; style=&quot;stop-color:rgb(121, 203, 184);stop-opacity:1&quot; /&gt;
+      &lt;/radialGradient&gt;
+      &lt;linearGradient id=&quot;octocat-grad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;0%&quot;&gt;
+        &lt;stop offset=&quot;0%&quot; style=&quot;stop-color:rgb(255,255,0);stop-opacity:1&quot; /&gt;
+        &lt;stop offset=&quot;100%&quot; style=&quot;stop-color:rgb(255,0,0);stop-opacity:1&quot; /&gt;
+      &lt;/linearGradient&gt;
+    &lt;/defs&gt;
+  &lt;/svg&gt;
+&lt;/github-corner&gt;
+        </code>
+      </pre>
+    </div>
+
+  </main>
+
+  <script>
+    hljs.highlightAll()
+  </script>
+</body>
+
+</html>

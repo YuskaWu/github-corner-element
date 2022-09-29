@@ -1,0 +1,56 @@
+{
+  "name": "github-corner-element",
+  "description": "A web component for the corner banner of GitHub.",
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": "^16.17.0",
+    "npm": "^8.15.0"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/YuskaWu/github-corner-element",
+  "author": {
+    "name": "Yuska Wu",
+    "url": "https://github.com/YuskaWu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YuskaWu/github-corner-element.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YuskaWu/github-corner-element/issues"
+  },
+  "keywords": [
+    "web-component",
+    "custom-element",
+    "github",
+    "banner",
+    "corner"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/github-corner-element.umd.js",
+  "browser": "./dist/github-corner-element.umd.js",
+  "module": "./dist/github-corner-element.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/github-corner-element.es.js",
+      "require": "./dist/github-corner-element.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}

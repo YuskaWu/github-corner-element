@@ -1,0 +1,67 @@
+:host {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  overflow: hidden;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+}
+
+:host([placement='top-left']) {
+  top: 0;
+  left: 0;
+  transform: scale(-1, 1);
+}
+
+:host([placement='top-right']) {
+  top: 0;
+  right: 0;
+}
+
+:host([placement='bottom-left']) {
+  bottom: 0;
+  left: 0;
+  transform: scale(-1, -1);
+}
+
+:host([placement='bottom-right']) {
+  bottom: 0;
+  right: 0;
+  transform: scale(1, -1);
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+svg.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.link:hover path[part='octocat-arm'],
+.link:active path[part='octocat-arm'] {
+  animation-name: wave-hand;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes wave-hand {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}

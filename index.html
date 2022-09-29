@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Corner</title>
+
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      position: relative;
+      height: 80vh;
+      width: 50vw;
+      margin: auto;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <script type="module" src="/src/main.ts"></script>
+  <div class="container">
+    <github-corner placement="top-right" size="20rem" href="https://github.com/YuskaWu/github-corner-element">
+      <svg slot="svg">
+        <circle cx="161" cy="75" r="4" fill="black" />
+        <circle cx="161" cy="75" r="6" stroke="black" fill="transparent" />
+        <circle cx="181" cy="95" r="4" fill="black" />
+        <circle cx="181" cy="95" r="6" stroke="black" fill="transparent" />
+      </svg>
+    </github-corner>
+  </div>
+</body>
+
+</html>

@@ -78,7 +78,7 @@ class GithubCorner extends HTMLElement {
     svgSlot.addEventListener('slotchange', () => {
       this.#cloneNodes.forEach((n) => {
         if (this.#svgContainer.contains(n)) {
-          this.removeChild(n)
+          this.#svgContainer.removeChild(n)
         }
       })
 
@@ -86,9 +86,7 @@ class GithubCorner extends HTMLElement {
         .assignedNodes()
         .filter((n) => n.nodeName === 'svg')
       this.#cloneNodes = svgNodes.map((n) => n.cloneNode(true))
-      this.#cloneNodes.forEach((n) => {
-        this.#svgContainer.append(n.cloneNode(true))
-      })
+      this.#cloneNodes.forEach((n) => this.#svgContainer.append(n))
     })
   }
 

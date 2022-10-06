@@ -40,6 +40,7 @@
     }
   },
   "scripts": {
+    "lint": "npx eslint .",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"

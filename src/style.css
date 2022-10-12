@@ -1,9 +1,15 @@
 :host {
+  --github-corner-size: 5rem;
+}
+
+:host {
   display: block;
   position: absolute;
   cursor: pointer;
   overflow: hidden;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  width: var(--github-corner-size);
+  height: var(--github-corner-size);
 }
 
 :host([placement='top-left']) {

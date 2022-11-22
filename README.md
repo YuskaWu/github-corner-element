@@ -1,8 +1,20 @@
-# github-corner-element
+<div align="center">
+  <img src="https://yuskawu.github.io/github-corner-element/github-corner.png" width="150" height="150" alt="github-corner">
+</div>
+<br />
+<div align="center">
+  <a href="https://www.webcomponents.org/element/github-corner-element">
+    <img src="https://img.shields.io/badge/webcomponents.org-published-blue.svg" alt="webcomponents.org">
+  </a>
+  <a href="https://www.npmjs.com/package/github-corner-element">
+    <img src="https://img.shields.io/npm/v/github-corner-element" alt="npm">
+  </a>
+  <a>
+    <img src="https://img.shields.io/bundlephobia/minzip/github-corner-element" alt="npm bundle size">
+  </a>
+</div>
 
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/github-corner-element)
-[![npm](https://img.shields.io/npm/v/github-corner-element)](https://www.npmjs.com/package/github-corner-element)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/github-corner-element)
+# github-corner-element
 
 A web component for the corner banner of GitHub, inspired by [Tim Holman](https://github.com/tholman)'s [GitHub Corners](https://github.com/tholman/github-corners).
 

@@ -44,15 +44,17 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "docs": "node build-readme-html.js"
+    "docs": "node build-docs.js"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
-    "github-readme-to-html": "^1.0.9",
+    "github-markdown-css": "^5.1.0",
     "prettier": "^2.7.1",
+    "showdown": "^2.1.0",
+    "showdown-highlight": "^3.1.0",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
   }

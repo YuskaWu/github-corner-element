@@ -1,5 +1,7 @@
 <div align="center">
-  <img src="https://yuskawu.github.io/github-corner-element/github-corner.png" width="150" height="150" alt="github-corner">
+  <a href="https://github.com/YuskaWu/github-corner-element">
+    <img src="https://yuskawu.github.io/github-corner-element/github-corner.png" width="150" height="150" alt="github-corner">
+  </a>
 </div>
 <br />
 <div align="center">
@@ -22,7 +24,7 @@ A web component for the corner banner of GitHub, inspired by [Tim Holman](https:
 
 ## Browser Compatibility
 
-It's compatible with browsers which supports [Web Component](https://developer.mozilla.org/en-US/docs/Web/Web_Components)(including `Custom elements`, `Shadow DOM` and `HTML Template`). For modern browsers it should be fine, but old browser may not work. Checkout the compatibility [here](https://caniuse.com/?search=web%20component).
+It's compatible with browsers which supports [Web Component](https://developer.mozilla.org/en-US/docs/Web/Web_Components)(including `Custom elements`, `Shadow DOM` and `HTML Template`). For modern browsers it should be fine, but old browser may not work. Check out the compatibility on [Can I use](https://caniuse.com/?search=web%20component) website.
 
 ## Installations
 
@@ -88,7 +90,7 @@ There are five parts in shadow DOM that can be selected by [::part()](https://de
 
 You can use devtool to inspect shadow DOM and checkout the position of these parts.
 
-Here is an example to style the parts inside shadow DOM(see live demo [here](https://yuskawu.github.io/github-corner-element/example#ex-styling)):
+Here is an example to style the parts inside shadow DOM(see [live demo](https://yuskawu.github.io/github-corner-element/example#ex-styling)):
 
 ```html
 <style>
@@ -125,7 +127,7 @@ Here is an example to style the parts inside shadow DOM(see live demo [here](htt
 
 There is a [slot](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot) named `"svg"`, SVG element on the slot will be cloned and append into the SVG container inside shadow DOM. If you want to add additional SVG to draw something special, or you want to define SVG gradients, you can use the slot to do so.
 
-Here is an example to draw eyes on octocat(see live demo [here](https://yuskawu.github.io/github-corner-element/example#ex-slot-eyes)):
+Here is an example to draw eyes on octocat(see [live demo](https://yuskawu.github.io/github-corner-element/example#ex-slot-eyes)):
 
 ```html
 <github-corner>

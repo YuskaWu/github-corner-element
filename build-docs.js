@@ -73,8 +73,9 @@ const html = `
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
-      "@type": "WebSite",
-      "name": "${docMeta['title']}",
+      "@type": "DigitalDocument",
+      "name": "${docMeta['title']} document",
+      "keywords": "Web Components, Custom Element, github-corner, corner banner, octocat",
       "description": "${docMeta['description']}",
       "url": "${docMeta['url']}"
     }

@@ -25,13 +25,13 @@ template.innerHTML = templateContent
 
 const PLACEMENT = ['top-right', 'top-left', 'bottom-right', 'bottom-left']
 
-const DEFAULT_SIZE = '5rem'
 const DEFAULT_BANNER_COLOR = 'black'
 const DEFAULT_OCTOCAT_COLOR = 'white'
 const DEFAULT_DURATION = '0.5s'
 
 class GithubCorner extends HTMLElement {
   #shadowRoot: ShadowRoot
+  #styleSheet: CSSStyleSheet
 
   #anchor: HTMLAnchorElement
   #svgContainer: SVGElement
@@ -46,14 +46,15 @@ class GithubCorner extends HTMLElement {
   constructor() {
     super()
 
+    this.#styleSheet = new CSSStyleSheet()
+    this.#styleSheet.replaceSync(cssContent)
+
     // Create a shadow root
     this.#shadowRoot = this.attachShadow({ mode: 'open' })
-
-    const style = document.createElement('style')
-    style.textContent = cssContent
+    this.#shadowRoot.adoptedStyleSheets = [this.#styleSheet]
 
     // attach the created elements to the shadow DOM
-    this.#shadowRoot.append(style, template.content.cloneNode(true))
+    this.#shadowRoot.append(template.content.cloneNode(true))
     this.#anchor = this.#shadowRoot.querySelector('a.link') as HTMLAnchorElement
 
     this.#svgContainer = this.#shadowRoot.querySelector(
@@ -91,9 +92,6 @@ class GithubCorner extends HTMLElement {
   }
 
   #init() {
-    const size = this.getAttribute('size')
-    this.#setSize(size ? size : DEFAULT_SIZE)
-
     if (!this.#banner.getAttribute('fill')) {
       this.#banner.setAttribute('fill', DEFAULT_BANNER_COLOR)
     }
@@ -108,11 +106,6 @@ class GithubCorner extends HTMLElement {
     if (!this.getAttribute('placement')) {
       this.setAttribute('placement', PLACEMENT[0])
     }
-  }
-
-  #setSize(size: string) {
-    this.style.width = size
-    this.style.height = size
   }
 
   connectedCallback() {
@@ -137,7 +130,11 @@ class GithubCorner extends HTMLElement {
   ) {
     switch (attributeName) {
       case 'size':
-        this.#setSize(newValue)
+        // replace size custom property
+        this.#styleSheet.deleteRule(0)
+        this.#styleSheet.insertRule(
+          `:host { --github-corner-size: ${newValue}; }`
+        )
         break
 
       case 'href':

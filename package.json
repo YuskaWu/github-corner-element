@@ -1,7 +1,7 @@
 {
   "name": "github-corner-element",
   "description": "A web component for the corner banner of GitHub.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "engines": {
     "node": "^16.17.0",
